@@ -1,0 +1,16 @@
+.lineup {
+    background-color: rgb(40, 179, 36);
+    width: 80%;
+    height: 100%;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+}
+
+.team-section {
+    background-color: rgb(132, 153, 143);
+    width: 20%;
+    height: 100%;
+}
