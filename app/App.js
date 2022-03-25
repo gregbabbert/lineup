@@ -1,14 +1,14 @@
-import React from 'react'
-import Team from './components/Team'
-import Lineup from './components/Lineup'
+import React from "react";
+import Team from "./components/Team";
+import LineupSide from "./components/LineupSide";
 
 const App = () => {
   return (
-    <div className="home" >
-      <Lineup/>
-      <Team/>
+    <div className="home">
+      <LineupSide />
+      <Team />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

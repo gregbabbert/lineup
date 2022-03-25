@@ -14,7 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _components_Team__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Team */ "./app/components/Team.js");
-/* harmony import */ var _components_Lineup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Lineup */ "./app/components/Lineup.js");
+/* harmony import */ var _components_LineupSide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/LineupSide */ "./app/components/LineupSide.js");
 
 
 
@@ -22,7 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 const App = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "home"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Lineup__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Team__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_LineupSide__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Team__WEBPACK_IMPORTED_MODULE_1__["default"], null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -37,18 +37,67 @@ const App = () => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Lineup": () => (/* binding */ Lineup),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+const Lineup = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "lineup"
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Lineup);
+
+/***/ }),
+
+/***/ "./app/components/LineupSide.js":
+/*!**************************************!*\
+  !*** ./app/components/LineupSide.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Navbar */ "./app/components/Navbar.js");
+/* harmony import */ var _Lineup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Lineup */ "./app/components/Lineup.js");
+
+
+
+
+const LineupSide = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "lineup-side"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Lineup__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LineupSide);
+
+/***/ }),
+
+/***/ "./app/components/Navbar.js":
+/*!**********************************!*\
+  !*** ./app/components/Navbar.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
-const Lineup = () => {
+const Navbar = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "lineup"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "lineup"));
+    className: "navbar"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Formations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Save"));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Lineup);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Navbar);
 
 /***/ }),
 
@@ -66,9 +115,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Team = () => {
+  const [team, setTeam] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('TEAM');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "team-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "go team"));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, team), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "First 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Team);

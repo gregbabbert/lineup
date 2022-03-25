@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Lineup = () => {
+export const Lineup = () => {
   return (
-    <div className='lineup' >
-        <p>lineup</p>
+    <div className="lineup" >
+        
     </div>
   )
 }
