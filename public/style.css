@@ -49,3 +49,24 @@ html, body {
 .team-section h3 {
     text-align: center;
 }
+
+.player {
+    display:flex;
+    flex-direction: row;
+    border: solid black;
+    border-radius: 1em;
+    margin: 0em .5em;
+}
+
+.player-number {
+    font-size: 2em;   
+}
+
+.player-words {
+    margin-left: 2em;
+    text-align: center;
+}
+
+.player-name {
+    font-size: 1.25em;
+}

@@ -101,6 +101,37 @@ const Navbar = () => {
 
 /***/ }),
 
+/***/ "./app/components/Player.js":
+/*!**********************************!*\
+  !*** ./app/components/Player.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const Player = props => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "player"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "player-number"
+  }, props.number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "player-words"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "player-name"
+  }, props.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "player-position"
+  }, props.position)));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Player);
+
+/***/ }),
+
 /***/ "./app/components/Team.js":
 /*!********************************!*\
   !*** ./app/components/Team.js ***!
@@ -112,13 +143,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _Player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Player */ "./app/components/Player.js");
+
 
 
 const Team = () => {
   const [team, setTeam] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('TEAM');
+  const [teamPlayers, setTeamPlayers] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+    number: '15',
+    name: "Sergio Ramos",
+    position: "Centerback"
+  }, {
+    number: '10',
+    name: "Lionel Messi",
+    position: "Centerforward"
+  }]);
+  const [formPlayer, setFormPlayer] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+    number: 0,
+    name: '',
+    position: ''
+  }]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "team-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, team), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "First 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, team), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "First 11"), teamPlayers.map(player => {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Player__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      number: player.number,
+      name: player.name,
+      position: player.position
+    });
+  }));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Team);
