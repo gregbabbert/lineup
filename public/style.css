@@ -1,72 +1,84 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0px;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
 }
 
 #app {
-    height: 100%;
+  height: 100%;
 }
 
 .lineup-side {
-    width:100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 8%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: rgb(189, 189, 189);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(189, 189, 189);
 }
 
 .lineup {
-    margin: 0;
-    padding: 0;
-    width:100%;
-    height: 92%;
-    background-color: rgb(42, 204, 96);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 92%;
+  background-color: rgb(42, 204, 96);
+  display: grid;
+  grid-template-columns: 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909%;
+  grid-template-rows: 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909%;
+}
+
+.goalie {
+    background-color: red;
+    grid-column-start: 6;
+    grid-row-start: 10;
+    grid-column-end: 7;
+    grid-row-end: 11;
 }
 
 .home {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width:100%
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
 .team-section {
-    background-color: rgb(132, 153, 143);
-    width: 20%;
-    height: 100%;
+  background-color: rgb(132, 153, 143);
+  width: 20%;
+  height: 100%;
 }
 .team-section h3 {
-    text-align: center;
+  text-align: center;
 }
 
 .player {
-    display:flex;
-    flex-direction: row;
-    border: solid black;
-    border-radius: 1em;
-    margin: 0em .5em;
+  display: flex;
+  flex-direction: row;
+  border: solid black;
+  border-radius: 1em;
+  margin: 0em 0.5em;
 }
 
 .player-number {
-    font-size: 2em;   
+  font-size: 2em;
 }
 
 .player-words {
-    margin-left: 2em;
-    text-align: center;
+  margin-left: 2em;
+  text-align: center;
 }
 
 .player-name {
-    font-size: 1.25em;
+  font-size: 1.25em;
 }

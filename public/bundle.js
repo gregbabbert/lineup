@@ -41,13 +41,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _LineupPlayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LineupPlayer */ "./app/components/LineupPlayer.js");
+
 
 const Lineup = () => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "lineup"
-  });
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "goalie"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player1"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player2"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player3"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player4"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player5"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player6"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player7"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player8"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player9"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    place: "player10"
+  }));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Lineup);
+
+/***/ }),
+
+/***/ "./app/components/LineupPlayer.js":
+/*!****************************************!*\
+  !*** ./app/components/LineupPlayer.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const LineupPlayer = props => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: props.place
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LineupPlayer);
 
 /***/ }),
 
