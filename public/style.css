@@ -38,8 +38,76 @@ body {
   grid-template-rows: 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909% 9.09090909%;
 }
 
-.goalie {
+.goalie, .player1, .player2, .player3, .player4, .player5, .player6, .player7, .player8, .player9, .player10 {
     background-color: red;
+}
+
+.player1 {
+    grid-column-start: 5;
+    grid-row-start: 2;
+    grid-column-end: 6;
+    grid-row-end: 3;
+}
+
+.player2 {
+    grid-column-start: 7;
+    grid-row-start: 2;
+    grid-column-end: 8;
+    grid-row-end: 3;
+}
+.player3 {
+    grid-column-start: 2;
+    grid-row-start: 5;
+    grid-column-end: 3;
+    grid-row-end: 6;
+}
+
+.player4 {
+    grid-column-start: 5;
+    grid-row-start: 5;
+    grid-column-end: 6;
+    grid-row-end: 6;
+}
+.player5 {
+    grid-column-start: 7;
+    grid-row-start: 5;
+    grid-column-end: 8;
+    grid-row-end: 6;
+}
+
+.player6 {
+    grid-column-start: 10;
+    grid-row-start: 5;
+    grid-column-end: 11;
+    grid-row-end: 6;
+}
+.player7 {
+    grid-column-start: 2;
+    grid-row-start: 8;
+    grid-column-end: 3;
+    grid-row-end: 9;
+}
+
+.player8 {
+    grid-column-start: 5;
+    grid-row-start: 8;
+    grid-column-end: 6;
+    grid-row-end: 9;
+}
+.player9 {
+    grid-column-start: 7;
+    grid-row-start: 8;
+    grid-column-end: 8;
+    grid-row-end: 9;
+}
+
+.player10 {
+    grid-column-start: 10;
+    grid-row-start: 8;
+    grid-column-end: 11;
+    grid-row-end: 9;
+}
+.goalie {
     grid-column-start: 6;
     grid-row-start: 10;
     grid-column-end: 7;
