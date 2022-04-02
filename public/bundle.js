@@ -139,6 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Navbar = () => {
+  const [color, setColor] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('red');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "navbar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Formations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -148,7 +149,7 @@ const Navbar = () => {
     id: "lang",
     number: "3",
     onClick: event => {
-      console.log(event);
+      setColor(event.target.options[event.target.selectedIndex].value);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
     value: "red"
@@ -241,7 +242,7 @@ const Team = () => {
       name: player.name,
       position: player.position
     });
-  }));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "+"));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Team);

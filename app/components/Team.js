@@ -25,6 +25,7 @@ const Team = () => {
         {teamPlayers.map(player => {
           return <Player number={player.number} name={player.name} position={player.position} />
         })}
+        <button>+</button>
         
     </div>
   )
