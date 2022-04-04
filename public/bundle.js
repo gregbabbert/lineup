@@ -219,30 +219,59 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Team = () => {
-  const [team, setTeam] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('TEAM');
+  const [team, setTeam] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("TEAM");
   const [teamPlayers, setTeamPlayers] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
-    number: '15',
+    number: "15",
     name: "Sergio Ramos",
     position: "Centerback"
   }, {
-    number: '10',
+    number: "10",
     name: "Lionel Messi",
     position: "Centerforward"
   }]);
   const [formPlayer, setFormPlayer] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
     number: 0,
-    name: '',
-    position: ''
+    name: "",
+    position: ""
   }]);
+
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    const newPlayer = {
+      number: evt.target[2].value,
+      name: evt.target[0].value,
+      position: evt.target[1].value
+    };
+    setTeamPlayers([...teamPlayers, newPlayer]);
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "team-section"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, team), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "First 11"), teamPlayers.map(player => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Player__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      key: player.name + player.number,
       number: player.number,
       name: player.name,
       position: player.position
     });
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", null, "+"));
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", {
+    id: "player-form",
+    onSubmit: handleSubmit
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "player-name"
+  }, "Player Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    name: "player-name"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "player-position"
+  }, "Position:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    name: "player-position"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    htmlFor: "number"
+  }, "Number:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
+    name: "number"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    type: "submit"
+  }, "Add Player")));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Team);
