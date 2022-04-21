@@ -37,9 +37,11 @@ const Team = () => {
     <div className="team-section">
       <h3>{team}</h3>
       <h5>First 11</h5>
+      <div className="player-list" >
       {teamPlayers.map((player) => {
         return <Player key={player.name + player.number} number={player.number} name={player.name} position={player.position} />;
       })}
+      </div>
       <form id="player-form" onSubmit={handleSubmit} >
         <label htmlFor="player-name">Player Name:</label>
         <input name="player-name" />
