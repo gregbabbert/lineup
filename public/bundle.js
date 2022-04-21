@@ -260,18 +260,30 @@ const Team = () => {
     id: "player-form",
     onSubmit: handleSubmit
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    style: {
+      display: "block"
+    },
     htmlFor: "player-name"
   }, "Player Name:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     name: "player-name"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    style: {
+      display: "block"
+    },
     htmlFor: "player-position"
   }, "Position:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     name: "player-position"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("label", {
+    style: {
+      display: "block"
+    },
     htmlFor: "number"
   }, "Number:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("input", {
     name: "number"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
+    style: {
+      display: "block"
+    },
     type: "submit"
   }, "Add Player")));
 };

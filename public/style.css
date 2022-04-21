@@ -135,7 +135,7 @@ body {
 
 .player-list {
   overflow-x: hidden;
-  height: 70%;
+  height: 65%;
   overflow-y: auto;
   text-align:justify;
 }
@@ -170,4 +170,12 @@ body {
 .color-selector select {
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+form#player-form {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  align-items: center;
+  display:flex;
+  flex-direction: column;
 }

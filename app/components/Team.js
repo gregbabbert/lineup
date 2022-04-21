@@ -43,16 +43,16 @@ const Team = () => {
       })}
       </div>
       <form id="player-form" onSubmit={handleSubmit} >
-        <label htmlFor="player-name">Player Name:</label>
+        <label style={{display: "block"}} htmlFor="player-name">Player Name:</label>
         <input name="player-name" />
 
-        <label htmlFor="player-position">Position:</label>
+        <label style={{display: "block"}} htmlFor="player-position">Position:</label>
         <input name="player-position" />
 
-        <label htmlFor="number">Number:</label>
+        <label style={{display: "block"}} htmlFor="number">Number:</label>
         <input name="number" />
 
-        <button type="submit">Add Player</button>
+        <button style={{display: "block"}} type="submit">Add Player</button>
       </form>
     </div>
   );
