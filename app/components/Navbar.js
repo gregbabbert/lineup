@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const Navbar = () => {
-  const [color, setColor] = useState('red')
+const Navbar = (props) => {
   return (
     <div className="navbar">
       <p>Login</p>
@@ -9,7 +8,7 @@ const Navbar = () => {
       <div className="color-selector" >
         <p>Color</p>
         <select name="languages" id="lang" number="3" onClick={(event) => {
-          setColor(event.target.options[event.target.selectedIndex].value)
+          props.setPlayerColor(event.target.options[event.target.selectedIndex].value)
         }}> 
           <option value="red"  >Red</option>
           <option value="blue">Blue</option>

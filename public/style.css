@@ -40,7 +40,6 @@ body {
 }
 
 .goalie, .player1, .player2, .player3, .player4, .player5, .player6, .player7, .player8, .player9, .player10 {
-    background-color: red;
     border: solid black;
     border-radius: 1em;
 }
@@ -138,6 +137,7 @@ body {
   height: 65%;
   overflow-y: auto;
   text-align:justify;
+  box-shadow: inset 0px 0px 20px 10px rgba(54, 59, 57, 0.2);
 }
 
 .player {
@@ -145,7 +145,8 @@ body {
   flex-direction: row;
   border: solid black;
   border-radius: 1em;
-  margin: 0em 0.5em;
+  margin: 0.2em 0.5em;
+  background-color: rgba(132, 153, 143);;
 }
 
 .player-number {

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const LineupPlayer = (props) => {
   return (
-    <div className={props.place} >
+    <div style={{backgroundColor: props.color}} className={props.place} >
         <h1></h1>
     </div>
   )

@@ -44,30 +44,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _LineupPlayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LineupPlayer */ "./app/components/LineupPlayer.js");
 
 
-const Lineup = () => {
+const Lineup = props => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "lineup"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "goalie"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player1"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player2"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player3"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player4"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player5"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player6"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player7"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player8"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player9"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
     place: "player10"
   }));
 };
@@ -90,6 +101,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const LineupPlayer = props => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    style: {
+      backgroundColor: props.color
+    },
     className: props.place
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null));
 };
@@ -116,9 +130,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const LineupSide = () => {
+  const [playerColor, setPlayerColor] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('red');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "lineup-side"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Lineup__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    setPlayerColor: setPlayerColor
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Lineup__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    color: playerColor
+  }));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LineupSide);
@@ -138,8 +157,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
-const Navbar = () => {
-  const [color, setColor] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('red');
+const Navbar = props => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "navbar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Formations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -149,7 +167,7 @@ const Navbar = () => {
     id: "lang",
     number: "3",
     onClick: event => {
-      setColor(event.target.options[event.target.selectedIndex].value);
+      props.setPlayerColor(event.target.options[event.target.selectedIndex].value);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
     value: "red"
@@ -220,15 +238,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const Team = () => {
   const [team, setTeam] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("TEAM");
-  const [teamPlayers, setTeamPlayers] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
-    number: "15",
-    name: "Sergio Ramos",
-    position: "Centerback"
-  }, {
-    number: "10",
-    name: "Lionel Messi",
-    position: "Centerforward"
-  }]);
+  const [teamPlayers, setTeamPlayers] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   const [formPlayer, setFormPlayer] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
     number: 0,
     name: "",
@@ -247,7 +257,7 @@ const Team = () => {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "team-section"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, team), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h5", null, "First 11"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", null, team), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "player-list"
   }, teamPlayers.map(player => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Player__WEBPACK_IMPORTED_MODULE_1__["default"], {
