@@ -1,13 +1,28 @@
 import React, { useState } from "react";
 
 const Navbar = (props) => {
+  const [formation, setFormation] = useState('442')
   return (
     <div className="navbar">
       <p>Login</p>
-      <p>Formations</p>
+      <div className="formation-selector" >
+        <p>Fomation</p>
+        <select name="formation" id="lang" number="3" onClick={(event) => {
+          props.setFormation(event.target.options[event.target.selectedIndex].value)
+        }}> 
+          <option value="442"  >442</option>
+          <option value="433">433</option>
+          <option value="4231">4231</option>
+          <option value="343">343</option>
+          <option value="352">352</option>
+          <option value="41212">41212</option>
+          <option value="523">523</option>
+          <option value="533">532</option>
+        </select>
+      </div>
       <div className="color-selector" >
         <p>Color</p>
-        <select name="languages" id="lang" number="3" onClick={(event) => {
+        <select name="color" id="lang" number="3" onClick={(event) => {
           props.setPlayerColor(event.target.options[event.target.selectedIndex].value)
         }}> 
           <option value="red"  >Red</option>

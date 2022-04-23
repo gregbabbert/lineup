@@ -49,36 +49,47 @@ const Lineup = props => {
     className: "lineup"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "goalie"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player1"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player2"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player3"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player4"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player5"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player6"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player7"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player8"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player9"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
     color: props.color,
+    formation: props.formation,
     place: "player10"
   }));
 };
@@ -105,7 +116,7 @@ const LineupPlayer = props => {
       backgroundColor: props.color
     },
     className: props.place
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, props.formation));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LineupPlayer);
@@ -131,12 +142,15 @@ __webpack_require__.r(__webpack_exports__);
 
 const LineupSide = () => {
   const [playerColor, setPlayerColor] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('red');
+  const [formation, setFormation] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('442');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "lineup-side"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    setPlayerColor: setPlayerColor
+    setPlayerColor: setPlayerColor,
+    setFormation: setFormation
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Lineup__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    color: playerColor
+    color: playerColor,
+    formation: formation
   }));
 };
 
@@ -158,12 +172,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Navbar = props => {
+  const [formation, setFormation] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('442');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "navbar"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Formations"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Login"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "formation-selector"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Fomation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
+    name: "formation",
+    id: "lang",
+    number: "3",
+    onClick: event => {
+      props.setFormation(event.target.options[event.target.selectedIndex].value);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "442"
+  }, "442"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "433"
+  }, "433"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "4231"
+  }, "4231"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "343"
+  }, "343"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "352"
+  }, "352"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "41212"
+  }, "41212"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "523"
+  }, "523"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "533"
+  }, "532"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "color-selector"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
-    name: "languages",
+    name: "color",
     id: "lang",
     number: "3",
     onClick: event => {
