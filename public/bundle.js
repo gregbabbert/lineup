@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./app/App.js":
@@ -7,7 +8,6 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -33,9 +33,152 @@ const App = () => {
 /*!**********************************!*\
   !*** ./app/components/Lineup.js ***!
   \**********************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/gbabbert/personal_projects/lineup/app/components/Lineup.js: Unexpected token (19:6)\n\n\u001b[0m \u001b[90m 17 |\u001b[39m         \u001b[36mlet\u001b[39m player \u001b[33m=\u001b[39m playerInput\u001b[33m.\u001b[39mshift()\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m         player\u001b[33m.\u001b[39mrow \u001b[33m=\u001b[39m \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m       }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m   } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (lines\u001b[33m.\u001b[39mlength \u001b[33m===\u001b[39m \u001b[35m4\u001b[39m) {\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m\u001b[0m\n    at instantiate (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:72:32)\n    at constructor (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:358:12)\n    at Object.raise (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:3334:19)\n    at Object.unexpected (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:3372:16)\n    at Object.parseExprAtom (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:13014:22)\n    at Object.parseExprAtom (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:8033:20)\n    at Object.parseExprSubscripts (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12539:23)\n    at Object.parseUpdate (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12518:21)\n    at Object.parseMaybeUnary (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12283:61)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Lineup": () => (/* binding */ Lineup),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _LineupPlayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LineupPlayer */ "./app/components/LineupPlayer.js");
+
+
+
+function createFormation(players, formation) {
+  const columnObj = {
+    '1': [6],
+    '2': [5, 7],
+    '3': [4, 6, 8],
+    '4': [3, 5, 7, 9],
+    '5': [2, 4, 6, 8, 10]
+  };
+  const lines = formation.split('');
+  const playerInput = [...players];
+
+  if (lines.length === 3) {
+    lines.forEach((lineNum, j) => {
+      const num = parseInt(lineNum);
+      const columnThree = [8, 5, 2];
+
+      for (let i = 0; i < num; i++) {
+        let player = playerInput.shift();
+        player.row = columnThree[j];
+        player.column = columnObj[lineNum][i];
+      }
+    });
+  } else if (lines.length === 4) {
+    lines.forEach((lineNum, j) => {
+      const num = parseInt(lineNum);
+      const columnFour = [8, 6, 4, 2];
+
+      for (let i = 0; i < num; i++) {
+        let player = playerInput.shift();
+        player.row = columnFour[j];
+        player.column = columnObj[lineNum][i];
+      }
+    });
+  } else if (lines.length === 5) {
+    lines.forEach((lineNum, j) => {
+      const num = parseInt(lineNum);
+      const columnFive = [8, 7, 6, 4, 2];
+
+      for (let i = 0; i < num; i++) {
+        let player = playerInput.shift();
+        player.row = columnFive[j];
+        player.column = columnObj[lineNum][i];
+      }
+    });
+  }
+}
+
+const Lineup = props => {
+  const [outfieldPlayers, setOutfieldPlayers] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }, {
+    row: 0,
+    column: 0
+  }]);
+  createFormation(outfieldPlayers, props.formation);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "lineup"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
+    formation: props.formation,
+    place: "goalie",
+    key: "goalie",
+    playerPosition: {
+      row: 10,
+      column: 6
+    }
+  }), outfieldPlayers.map((ele, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    color: props.color,
+    formation: props.formation,
+    place: 'player' + (i + 1),
+    key: 'player' + (i + 1),
+    playerPosition: ele
+  })));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Lineup);
+
+/***/ }),
+
+/***/ "./app/components/LineupPlayer.js":
+/*!****************************************!*\
+  !*** ./app/components/LineupPlayer.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const LineupPlayer = props => {
+  const rowStart = props.playerPosition.row;
+  const rowEnd = props.playerPosition.row + 1;
+  const columnStart = props.playerPosition.column;
+  const columnEnd = props.playerPosition.column + 1;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    style: {
+      backgroundColor: props.color,
+      gridRowStart: rowStart,
+      gridRowEnd: rowEnd,
+      gridColumnStart: columnStart,
+      gridColumnEnd: columnEnd
+    },
+    className: props.place
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LineupPlayer);
 
 /***/ }),
 
@@ -45,7 +188,6 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -81,7 +223,6 @@ const LineupSide = () => {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -154,7 +295,6 @@ const Navbar = props => {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -186,7 +326,6 @@ const Player = props => {
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -268,7 +407,6 @@ const Team = () => {
   \*********************************************/
 /***/ ((module) => {
 
-"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -369,7 +507,6 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /** @license React v17.0.2
  * react-dom.development.js
  *
@@ -26637,7 +26774,6 @@ exports.version = ReactVersion;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 function checkDCE() {
@@ -26681,7 +26817,6 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-"use strict";
 /** @license React v17.0.2
  * react.development.js
  *
@@ -29025,7 +29160,6 @@ exports.version = ReactVersion;
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -29041,7 +29175,6 @@ if (false) {} else {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 /** @license React v0.20.2
  * scheduler-tracing.development.js
  *
@@ -29399,7 +29532,6 @@ exports.unstable_wrap = unstable_wrap;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
-"use strict";
 /** @license React v0.20.2
  * scheduler.development.js
  *
@@ -30056,7 +30188,6 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -30072,7 +30203,6 @@ if (false) {} else {
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-"use strict";
 
 
 if (false) {} else {
@@ -30139,9 +30269,8 @@ if (false) {} else {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**********************!*\
   !*** ./app/index.js ***!
   \**********************/

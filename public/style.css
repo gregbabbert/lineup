@@ -44,7 +44,7 @@ body {
     border-radius: 1em;
 }
 
-.player1 {
+/* .player1 {
     grid-column-start: 5;
     grid-row-start: 2;
     grid-column-end: 6;
@@ -114,7 +114,7 @@ body {
     grid-row-start: 10;
     grid-column-end: 7;
     grid-row-end: 11;
-}
+} */
 
 .home {
   display: flex;
