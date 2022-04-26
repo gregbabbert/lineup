@@ -17,7 +17,7 @@ const Navbar = (props) => {
           <option value="352">352</option>
           <option value="41212">41212</option>
           <option value="523">523</option>
-          <option value="533">532</option>
+          <option value="532">532</option>
         </select>
       </div>
       <div className="color-selector" >

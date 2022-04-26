@@ -1,5 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./app/App.js":
@@ -8,6 +7,7 @@
   \********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -33,93 +33,9 @@ const App = () => {
 /*!**********************************!*\
   !*** ./app/components/Lineup.js ***!
   \**********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Lineup": () => (/* binding */ Lineup),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _LineupPlayer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LineupPlayer */ "./app/components/LineupPlayer.js");
-
-
-const Lineup = props => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "lineup"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "goalie"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player1"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player2"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player3"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player4"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player5"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player6"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player7"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player8"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player9"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_LineupPlayer__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    color: props.color,
-    formation: props.formation,
-    place: "player10"
-  }));
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Lineup);
-
-/***/ }),
-
-/***/ "./app/components/LineupPlayer.js":
-/*!****************************************!*\
-  !*** ./app/components/LineupPlayer.js ***!
-  \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-const LineupPlayer = props => {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    style: {
-      backgroundColor: props.color
-    },
-    className: props.place
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, props.formation));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LineupPlayer);
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/gbabbert/personal_projects/lineup/app/components/Lineup.js: Unexpected token (19:6)\n\n\u001b[0m \u001b[90m 17 |\u001b[39m         \u001b[36mlet\u001b[39m player \u001b[33m=\u001b[39m playerInput\u001b[33m.\u001b[39mshift()\u001b[0m\n\u001b[0m \u001b[90m 18 |\u001b[39m         player\u001b[33m.\u001b[39mrow \u001b[33m=\u001b[39m \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m       }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 20 |\u001b[39m     })\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m   } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (lines\u001b[33m.\u001b[39mlength \u001b[33m===\u001b[39m \u001b[35m4\u001b[39m) {\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m\u001b[0m\n    at instantiate (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:72:32)\n    at constructor (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:358:12)\n    at Object.raise (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:3334:19)\n    at Object.unexpected (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:3372:16)\n    at Object.parseExprAtom (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:13014:22)\n    at Object.parseExprAtom (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:8033:20)\n    at Object.parseExprSubscripts (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12539:23)\n    at Object.parseUpdate (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12518:21)\n    at Object.parseMaybeUnary (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (/home/gbabbert/personal_projects/lineup/node_modules/@babel/parser/lib/index.js:12283:61)");
 
 /***/ }),
 
@@ -129,6 +45,7 @@ const LineupPlayer = props => {
   \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -164,6 +81,7 @@ const LineupSide = () => {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -199,7 +117,7 @@ const Navbar = props => {
   }, "41212"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
     value: "523"
   }, "523"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
-    value: "533"
+    value: "532"
   }, "532"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "color-selector"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Color"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
@@ -236,6 +154,7 @@ const Navbar = props => {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -267,6 +186,7 @@ const Player = props => {
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -348,6 +268,7 @@ const Team = () => {
   \*********************************************/
 /***/ ((module) => {
 
+"use strict";
 /*
 object-assign
 (c) Sindre Sorhus
@@ -448,6 +369,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /** @license React v17.0.2
  * react-dom.development.js
  *
@@ -26715,6 +26637,7 @@ exports.version = ReactVersion;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 function checkDCE() {
@@ -26758,6 +26681,7 @@ if (false) {} else {
   \*****************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+"use strict";
 /** @license React v17.0.2
  * react.development.js
  *
@@ -29101,6 +29025,7 @@ exports.version = ReactVersion;
   \*************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -29116,6 +29041,7 @@ if (false) {} else {
   \*********************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /** @license React v0.20.2
  * scheduler-tracing.development.js
  *
@@ -29473,6 +29399,7 @@ exports.unstable_wrap = unstable_wrap;
   \*************************************************************/
 /***/ ((__unused_webpack_module, exports) => {
 
+"use strict";
 /** @license React v0.20.2
  * scheduler.development.js
  *
@@ -30129,6 +30056,7 @@ exports.unstable_wrapCallback = unstable_wrapCallback;
   \*****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -30144,6 +30072,7 @@ if (false) {} else {
   \*******************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+"use strict";
 
 
 if (false) {} else {
@@ -30210,8 +30139,9 @@ if (false) {} else {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./app/index.js ***!
   \**********************/
