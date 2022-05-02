@@ -10,12 +10,13 @@ const Navbar = (props) => {
         <select name="formation" id="lang" number="3" onClick={(event) => {
           props.setFormation(event.target.options[event.target.selectedIndex].value)
         }}> 
-          <option value="442"  >442</option>
+          <option value="442">442</option>
+          <option value="41212">41212</option>
           <option value="433">433</option>
           <option value="4231">4231</option>
+          <option value="4141">4141</option>
           <option value="343">343</option>
           <option value="352">352</option>
-          <option value="41212">41212</option>
           <option value="523">523</option>
           <option value="532">532</option>
         </select>
